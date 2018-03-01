@@ -71,14 +71,14 @@ function updateRates(){
 		}
 	], function(){
 		console.log(rates);
-		if (state.updated)
-			broadcastNewRates();
+	//	if (state.updated)
+	//		broadcastNewRates();
 	});
 }
 
-function broadcastNewRates(){
-	network.sendAllInboundJustsaying('exchange_rates', rates);
-}
+//function broadcastNewRates(){
+//	network.sendAllInboundJustsaying('exchange_rates', rates);
+//}
 
 eventBus.on('client_logged_in', function(ws){
 	if (Object.keys(rates).length > 0)
